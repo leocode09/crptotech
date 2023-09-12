@@ -1,8 +1,5 @@
 import Header from '@/components/Header'
-import Nav from '@/components/navigation/Nav'
-import Image from 'next/image'
 import getFeatured from './actions/getFeatured'
-import Featured from '@/components/Products'
 import Products from '@/components/Products'
 
 export default async function Home() {
