@@ -8,18 +8,28 @@ const useFilters = () => {
     () => [
       {
         label: "Books",
-        key: 'books',
-        checked: searchParams.toString() == "search=books",
+        key: "books",
+        checked: searchParams.toString() == "filter=books",
       },
       {
-         label: "Electronics",
-         key: 'electronics',
-         checked: searchParams.toString() == "search=electronics",
+        label: "Electronics",
+        key: "electronics",
+        checked: searchParams.toString() == "filter=electronics",
       },
       {
-         label: "Materials",
-         key: 'materials',
-         checked: searchParams.toString() == "search=materials",
+        label: "Materials",
+        key: "materials",
+        checked: searchParams.toString() == "filter=materials",
+      },
+      {
+        label: "School",
+        key: "school",
+        checked: searchParams.toString() == "filter=school",
+      },
+      {
+        label: "Fashion",
+        key: "fashion",
+        checked: searchParams.toString() == "filter=fashion",
       },
     ],
     [searchParams]

@@ -3,7 +3,7 @@ import React from 'react'
 function Separater() {
   return (
    <>
-    <hr />
+    <hr className='mt-2 mb-2'/>
    </>
   )
 }

@@ -5,11 +5,11 @@ interface CheckerProps {
    checked: boolean;
    onClick?: ()=>void;
 }
-const Checker: React.FC<CheckerProps> = ({ label,checked }) => {
+const Checker: React.FC<CheckerProps> = ({ label, checked, onClick }) => {
    return (
-      <div className='p-2 border rounded-lg cursor-pointer'>
-         <input type="checkbox" checked={checked}/>
-         <p>{label}</p>
+      <div className='p-2 border rounded-lg cursor-pointer' onClick={onClick}>
+         <input type="checkbox" checked={checked} readOnly/>
+         <p className='text-[15px]'>{label}</p>
       </div>
    )
 }

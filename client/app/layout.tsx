@@ -1,5 +1,7 @@
+import Nav from '@/components/navigation/Nav'
 import './globals.css'
 import type { Metadata } from 'next'
+import { StateContext } from '@/context/StateContext.jsx'
 
 export const metadata: Metadata = {
   title: 'Crpto • Tech',
@@ -13,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='dark'>{children}</body>
+      <body className='dark'>
+        <StateContext>
+          <Nav />
+          {children}
+        </StateContext>
+      </body>
     </html>
   )
 }
