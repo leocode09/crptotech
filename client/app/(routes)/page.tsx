@@ -1,5 +1,5 @@
 import Header from '@/components/Header'
-import getFeatured from './actions/getFeatured'
+import getFeatured from '../actions/getFeatured'
 import Products from '@/components/Products'
 
 export default async function Home() {

@@ -1,11 +1,13 @@
 'use client'
+import { cn } from '@/lib/utils'
 import react from 'react'
 interface CardProps {
    children?: React.ReactNode
+   className?: string
 }
-const Card: React.FC<CardProps> = ({ children }) => {
+const Card: React.FC<CardProps> = ({ children,className }) => {
    return (
-      <div className='flex flex-col bg-gray-100 dark:bg-neutral-800/30 gap-3 p-3 rounded-lg w-full md:w-[250px]'>
+      <div className={cn('flex flex-col bg-gray-100 dark:bg-neutral-800/30 gap-3 p-3 rounded-lg',className)}>
          {children}
       </div>
    )

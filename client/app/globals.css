@@ -109,3 +109,7 @@ body,
   bottom: anchor(top);
   left: anchor(center);
 }
+h1 {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

@@ -17,7 +17,6 @@ export default function RootLayout({
     <html lang="en">
       <body className='dark'>
         <StateContext>
-          <Nav />
           {children}
         </StateContext>
       </body>

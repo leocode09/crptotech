@@ -8,6 +8,7 @@ import Checker from '../checker'
 import useFilters from '@/hooks/useFilters'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import useDebounce from '@/hooks/useDebounce'
+import useCart from '@/hooks/useCart'
 interface NavProps { }
 const Nav: React.FC<NavProps> = ({ }) => {
    const routes = useRoutes()
@@ -15,10 +16,14 @@ const Nav: React.FC<NavProps> = ({ }) => {
    const pathname = usePathname();
    const filters = useFilters()
    const search = useSearchParams()
+   const { isOpen } = useCart()
 
    const [filterValue, setFilterValue] = useState<string>("")
    const debouncedValue = useDebounce<string>(filterValue, 500)
-
+   if (isOpen) {
+      return null
+   }
+   
    useEffect(() => {
       const query = {
          filter: debouncedValue
@@ -27,11 +32,11 @@ const Nav: React.FC<NavProps> = ({ }) => {
          url: `${pathname}`,
          query: query
       })
-
+      
       router.push(url)
-
+      
    }, [debouncedValue, router])
-
+   
    console.log(filterValue);
 
    return (

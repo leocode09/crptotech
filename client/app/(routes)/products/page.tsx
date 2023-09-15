@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Nav from '@/components/navigation/Nav'
 import Image from 'next/image'
-import getProducts from '../actions/getProducts'
+import getProducts from '@/app/actions/getProducts'
 import Products from '@/components/Products'
 
 export default async function Home() {

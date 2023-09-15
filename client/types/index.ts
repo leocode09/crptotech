@@ -10,3 +10,6 @@ export type Product = {
 
   details: string
 };
+export type cartProduct = Product&{
+  quantity: number
+}
